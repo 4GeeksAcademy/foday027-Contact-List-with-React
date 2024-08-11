@@ -64,6 +64,7 @@ const FormControler = ({edit , contactId}) => {
         <input type="submit" value={edit ? 'edit' : 'create'} />
       </form>
       {edit && <button className="btn btn-dark" onClick={()=> navigate('/')}> Go back</button>}
+      <span className="ms-3"><i class="fa-solid fa-pen-to-square edit"></i></span>
     </section>
   );
 };

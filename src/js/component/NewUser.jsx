@@ -11,6 +11,12 @@ const NewUser = () => {
     actions.createAgenda(user)
   };
 
+  const handleDelete = (i) => {
+    let aux = todos;
+    aux = aux.filter((el, index) => i !== index);
+    setTodos(aux);
+};
+
   return (
     <div className="container">
       <h3>create agenda</h3>
@@ -20,7 +26,7 @@ const NewUser = () => {
           value={user}
           name="user"
           type="text"
-          placeholder="slug"
+          placeholder="contact"
           className="form-control"
         />
         <input type="submit" className="btn btn-dark"  />
